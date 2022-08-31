@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>anonymus</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background: linear-gradient(to bottom right ,#5e00b1, #4d54ff);
+		color: white;
+		font-family: "Open Sans", sans-serif;
+	}
+
+	.plan h1{
+		font-weight: bold;
+	}
+
+	section{
+		position: relative;
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background: url("{{ url_for('static', filename='bg.svg') }}")no-repeat;
+		background-size: cover;
+		background-position: center;
+
+	}
+
+	.logo{
+		font-family: bubblegums;
+	}
+
+	header{
+		position: relative;
+		top: 0;
+		width: 100%;
+		padding: 30px 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header .logo{
+		position: relative;
+		color: white;
+		font-size: 30px;
+		text-decoration: none;
+		font-weight: 800;
+		letter-spacing: 1px;
+	}
+
+	header .navigation{
+		color: white;
+		background: #5e00b1;
+		text-decoration: none;
+		font-weight: 500;
+		letter-spacing: 1px;
+		padding: 2px 15px;
+		border-radius: 20px;
+		transition-property: background;
+	}
+
+	a{
+		text-decoration: none;
+		color: white;
+	}
+
+	header .navigation a:not(:last-child){
+		margin-right: 30px;
+	}
+	header .navigation a:hover{
+		background: white;
+		background: #5e00b1;
+
+	}
+	.conteudo{
+		max-width: 650px;
+		margin: 60px 100px;
+		margin-left: 140px;
+		display: inline-block;
+	}
+
+	.img{
+		width: 520px;
+		margin-top: -300px;
+		margin-left: 600px;
+	}
+
+	.conteudo .info h1{
+		color: white;
+		font-size: 55px;
+		text-transform: uppercase;
+		font-weight: 800;
+		letter-spacing: 2px;
+		margin-bottom: 2px;
+		margin-left: -40px;
+	}
+	.conteudo .info .h1{
+		margin-left: 20px;
+	}
+
+	.conteudo .info h2{
+		font-size: 55px;
+		text-transform: uppercase;
+		font-weight: 800;
+		letter-spacing: 2px;
+		margin-bottom: 2px;
+		margin-left: -80px;
+	}
+
+	.conteudo .info p{
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 40px;
+		color: white;
+	}
+
+	input{
+		width: 250px;
+		outline: none;
+		border: none;
+		font-family: "Open Sans", sans-serif;
+		height: 30px;
+		border-radius: 4px;
+	}
+	.btn{
+		margin-top: 15px;
+		width: 250px;
+		outline: none;
+		border: none;
+		font-family: "Open Sans", sans-serif;
+		height: 50px;
+		border-radius: 50px;
+		color: #5e00b1;
+		background: white;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-size: 20px;
+		box-shadow: 0 0 1em #f1f1f1;
+		margin-left: -40px;
+	}
+	.title{
+		color: white;
+		margin-top: 20px;
+	}
+	.btn:hover{
+		color: white;
+		background: #5e00b1;
+		transition: .5s;
+	}
+
+	.redes{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+	.redes a{
+		position: relative;
+		color: white;
+		font-size: 25px;
+		transition: .3s;
+		transition-property: transform;
+
+	}
+
+	.redes a:not(:last-child){
+		margin-right: 60px;
+	}
+
+	.redes a:hover{
+		transform: scale(1.5);
+	}
+
+	@media (max-width: 960px){
+		header .navigation{
+			bottom: -6px;
+		}
+
+		header .logo{
+			position: absolute;
+			bottom: -2px;
+		}
+		.conteudo{
+			margin-left: 20%;
+		}
+		.conteudo .info h2{
+			font-size: 45px;
+			line-height: 50px;
+
+		}
+		.conteudo .info h2 span{
+			font-size: 40px;
+			font-weight: 600;
+		}
+		.conteudo .info p{
+			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 560px){
+		.conteudo .info h2{
+			font-size: 35px;
+			line-height: 40px;
+
+		}
+		.conteudo .info h2 span{
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.conteudo .info p{
+			font-size: 14px;
+		}
+	}
+
+</style>
+<body>
+	<section>
+		<header>
+			<h2><a href="#" class="logo">ANONYMUS</a></h2>
+			<div class="navigation">
+				<a href="/login">LOGIN</a>
+			</div>
+		</header>
+			<div class="conteudo">
+			<div class="info">
+				<h1>Mande sua mensagem Sendo<br> discreto!😏 </h1>
+				<a href="/login"><button class="btn">Criar</button></a>
+			</div>
+			<div class="img">
+				<img src="mulher.svg">
+			</div>
+		</div>
+		<div class="redes">
+			<a href="https://www.instagram.com/mazesoft/"><i class="fab fa-instagram"></i></a>
+			<a href="mailto:softmaze6@gmail.com"><i class="fab fa-google"></i></a>
+		</div>
+	</section>
+</body>
+</html>

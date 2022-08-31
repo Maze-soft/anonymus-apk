@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up | anonymus</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</head>
+<style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  .container-forms{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right ,#5e00b1, #4d54ff);
+  }
+  .login{
+    background: white;
+    border-radius: 6px;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+  }
+  header{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #232836;
+  }
+  form{
+    margin-top: 30px;
+  }
+
+  form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .field input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 6px;
+    outline: none;
+  }
+  .field input{
+    padding: 0 15px;
+    border: 1px solid #cacaca;
+  }
+
+  .form-link{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form-link span,
+  .form-link span a{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .form-link a{
+    text-decoration: none;
+    color: #5e00b1;
+  }
+
+  .form-link a:hover{
+    text-decoration: underline;
+  }
+
+  .btn{
+    cursor: pointer;
+    color: white;
+    background: #5e00b1;
+  }
+
+  .btn:hover{
+    transition: .80s;
+    background: linear-gradient(to bottom right ,#5e00b1, #4d54ff);
+  }
+
+</style>
+<body>
+    <!--<link rel="stylesheet" href="estilo.css"/>-->
+  </head>
+  <body>
+    <section class="container-forms">
+      <div class="login">
+        <div class="form-content">
+          <header>Sign Up</header>
+          <form action="{{url_for('signup')}}" method="post">
+             <div class="field input-field">
+              <input type="name" name="nome" placeholder="Nome" class="input" required>
+            </div>
+            <div class="field input-field">
+              <input type="email" name="email_sign" placeholder="Email" class="input" required>
+            </div>
+            <div class="field input-field">
+              <input type="password" name="senha_sign" placeholder="Senha" class="senha" required>
+            </div>
+            <div class="field button-field">
+              <input type="submit" value="Entrar" class="btn solid" />
+            </div>
+            <div class="form-link">
+              <span>Já tem uma conta?<a href="/login" class="signup">Clique aqui</a></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+           
+          <!--<form action="{{url_for('signup')}}" method="post" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input id="nome" name="nome" type="text" placeholder="Nome" required>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input id="email" name="email_sign" type="email" placeholder="Email" required>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input id="senha" name="senha_sign" type="password" placeholder="Senha" required>
+            </div>
+            <input type="submit" class="btn" value="Criar" />
+          </form>
+        </div>
+      </div>-->
+</body>
+</html>

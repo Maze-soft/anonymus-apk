@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inbox | anonymus</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+	* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+	background: #5e00b1;
+	font-family: "Open Sans", sans-serif;
+}
+
+.header_left h1{
+	object-fit: contain;
+	margin-left: 5px;
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #e6e6e6;
+	color: #a3a2a2;
+	height: 60px;
+	box-shadow: 0 0 1em #403e3f;
+}
+
+.header_left{
+	display: flex;
+	align-items: center;
+}
+
+.sidebar{
+	flex: 0.3;
+	max-width: 300px;
+	padding-right: 20px;
+}
+
+.criar{
+	margin-top: 15px;
+	margin-left: 30px;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+	color: #248c40;
+	background: #45ff76;
+	padding: 15px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	box-shadow: 0px 2px 5px -2px #f1f1f1;
+}
+
+.remov{
+	margin-top: 15px;
+	margin-left: 30px;
+	margin-bottom: 15px;
+	text-transform: capitalize;
+	color: #c9404a;
+	background: #fc7982;
+	padding: 15px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	box-shadow: 0px 2px 5px -2px #f1f1f1;
+}
+
+.email{
+	display: flex;
+	align-items: center;
+	height: 50px;
+	background: #e6e6e6;
+	color: #353536;
+	cursor: pointer;
+	z-index: 999;
+	box-shadow: 0px 2px 5px -2px #f1f1f1;
+	margin-right: 30px;
+	margin-left: 30px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.email:hover{
+	border-top: 1px solid whitesmoke;
+	box-shadow: 0 4px 4px -2px rgba(0, 0,0, .24);
+}
+
+.mensagem{
+	display: flex;
+	flex: .8;
+	align-items: center;
+	font-size: 13px;
+}
+
+.mensagem h4{
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 5px;
+}
+
+.title{
+	font-size: 13px;
+	flex: .3;
+}
+
+
+.in{
+	color: #240140;
+	margin-left: 30px;
+	margin-bottom: 5px;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+</style>
+<script type="text/javascript">
+	function remove() {
+		var element = document.getElementById("email");
+  		element.remove();
+}
+</script>
+
+<body>
+	<div class="header">
+		<div class="header_left">
+			<h1> Olá </h1>
+		</div>
+	</div>
+	<div class="main_body">
+		<div class="sidebar">
+			<a href="/mandar_msg"><button class="criar"><span class="material-icons">add</span>Criar</button></a>
+			<button class="remov" onclick="remove(this)"><span class="material-icons">remove</span>Excluir</button>
+		</div>
+	</div>
+	<!--Criar uma funçao no python para excluir permanentemente-->
+	<h1 class="in">Inbox</h1>
+	<div class="email" id="email">
+		<div id="msg" class="emailRow">
+			<!--<div class="emailRow_options">
+				<input type="checkbox" />
+			</div>-->
+	   </div>
+		<h3 class="title">{{ ti }}</h3>
+		<div class="mensagem">
+			<h4>{{ msg }}</h4>
+		</div>
+	</div>
+</body>
+</html>
